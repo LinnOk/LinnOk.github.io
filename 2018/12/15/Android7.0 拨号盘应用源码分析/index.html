@@ -5,15 +5,30 @@
   
 
   
-  <title>Lion&#39;s Blog</title>
+  <title>Android7.0 拨号盘应用源码分析 | Lion&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Lion&#39;s Blog">
-<meta property="og:url" content="http://sniffer.site/index.html">
+  <meta name="description" content="前言android拨号盘的源码目录在package/app/Dialer 自7.0以后Incallui的源码直接放到了Dialer目录下，虽然在7.0以前incallui有自己独立的目录，但实际编译过程中只是作为链接库最后还是被编译到Dialer的apk里 博主这里只取Dialer相关的源码并导入AS中，并稍作调整兼容至L 源码目录结构如下： 先理一理各个工程的依赖关系 com.android.d">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android7.0 拨号盘应用源码分析">
+<meta property="og:url" content="http://sniffer.site/2018/12/15/Android7.0 拨号盘应用源码分析/index.html">
 <meta property="og:site_name" content="Lion&#39;s Blog">
+<meta property="og:description" content="前言android拨号盘的源码目录在package/app/Dialer 自7.0以后Incallui的源码直接放到了Dialer目录下，虽然在7.0以前incallui有自己独立的目录，但实际编译过程中只是作为链接库最后还是被编译到Dialer的apk里 博主这里只取Dialer相关的源码并导入AS中，并稍作调整兼容至L 源码目录结构如下： 先理一理各个工程的依赖关系 com.android.d">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://sniffer.site/2018/12/15/Android7.0%20拨号盘应用源码分析/FB9D778072D0486D898B64042F8FA8BB">
+<meta property="og:image" content="http://sniffer.site/2018/12/15/Android7.0%20拨号盘应用源码分析/673CB837DDAE44A2BF0366E591EB1F8F">
+<meta property="og:image" content="http://sniffer.site/2018/12/15/Android7.0%20拨号盘应用源码分析/6D9FB9DC04394BFC9678894B1ACE0553">
+<meta property="og:image" content="http://sniffer.site/2018/12/15/Android7.0%20拨号盘应用源码分析/E11E9264D152477196CE74D611687C2C">
+<meta property="og:image" content="http://sniffer.site/2018/12/15/Android7.0%20拨号盘应用源码分析/15D223D8DAF4439B85EEA207E1D66170">
+<meta property="og:image" content="http://sniffer.site/2018/12/15/Android7.0%20拨号盘应用源码分析/C2B30B7AF67E499FA430A708835E3CFC">
+<meta property="og:image" content="http://sniffer.site/2018/12/15/Android7.0%20拨号盘应用源码分析/32CACB6651F6463FBF729C1B1572FB64">
+<meta property="og:image" content="http://sniffer.site/2018/12/15/Android7.0%20拨号盘应用源码分析/2AF107E2F071468C94676CCA08387D15">
+<meta property="og:image" content="http://sniffer.site/2018/12/15/Android7.0%20拨号盘应用源码分析/7966A3D3619441619A695B08E2734384">
+<meta property="og:image" content="http://sniffer.site/2018/12/15/Android7.0%20拨号盘应用源码分析/CE01A21D5F3F474C872516C3169B48C8">
+<meta property="og:updated_time" content="2018-12-15T09:46:09.955Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lion&#39;s Blog">
+<meta name="twitter:title" content="Android7.0 拨号盘应用源码分析">
+<meta name="twitter:description" content="前言android拨号盘的源码目录在package/app/Dialer 自7.0以后Incallui的源码直接放到了Dialer目录下，虽然在7.0以前incallui有自己独立的目录，但实际编译过程中只是作为链接库最后还是被编译到Dialer的apk里 博主这里只取Dialer相关的源码并导入AS中，并稍作调整兼容至L 源码目录结构如下： 先理一理各个工程的依赖关系 com.android.d">
+<meta name="twitter:image" content="http://sniffer.site/2018/12/15/Android7.0%20拨号盘应用源码分析/FB9D778072D0486D898B64042F8FA8BB">
   
     <link rel="alternate" href="/atom.xml" title="Lion&#39;s Blog" type="application/atom+xml">
   
@@ -64,9 +79,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-Android7.0 拨号盘应用源码分析" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <section id="main"><article id="post-Android7.0 拨号盘应用源码分析" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/12/15/Android7.0 拨号盘应用源码分析/" class="article-date">
   <time datetime="2018-12-15T09:26:12.000Z" itemprop="datePublished">2018-12-15</time>
@@ -79,8 +92,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/15/Android7.0 拨号盘应用源码分析/">Android7.0 拨号盘应用源码分析</a>
+    <h1 class="article-title" itemprop="name">
+      Android7.0 拨号盘应用源码分析
     </h1>
   
 
@@ -151,56 +164,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/12/15/hello-world/" class="article-date">
-  <time datetime="2018-12-15T06:34:16.915Z" itemprop="datePublished">2018-12-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/15/hello-world/">Hello World</a>
-    </h1>
+    <a href="/2018/12/15/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://sniffer.site/2018/12/15/hello-world/" data-id="cjpsafezk00004odrc8g9x2au" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-
 
 </section>
         
