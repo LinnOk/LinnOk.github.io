@@ -73,6 +73,8 @@
 
 
 
+  
+
 
   <link rel="alternate" href="/atom.xml" title="Lion's Blog" type="application/atom+xml">
 
@@ -82,27 +84,28 @@
 
 
 <meta name="description" content="前言android拨号盘的源码目录在package/app/Dialer 自7.0以后Incallui的源码直接放到了Dialer目录下，虽然在7.0以前incallui有自己独立的目录，但实际编译过程中只是作为链接库最后还是被编译到Dialer的apk里 博主这里只取Dialer相关的源码并导入AS中，并稍作调整兼容至L 源码目录结构如下： 先理一理各个工程的依赖关系 com.android.d">
+<meta name="keywords" content="Android Image">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android7.0 拨号盘应用源码分析">
-<meta property="og:url" content="http://sniffer.site/2018/12/15/Android7.0 拨号盘应用源码分析/index.html">
+<meta property="og:url" content="https://linnok.github.io/2018/12/15/Android7.0 拨号盘应用源码分析/index.html">
 <meta property="og:site_name" content="Lion&#39;s Blog">
 <meta property="og:description" content="前言android拨号盘的源码目录在package/app/Dialer 自7.0以后Incallui的源码直接放到了Dialer目录下，虽然在7.0以前incallui有自己独立的目录，但实际编译过程中只是作为链接库最后还是被编译到Dialer的apk里 博主这里只取Dialer相关的源码并导入AS中，并稍作调整兼容至L 源码目录结构如下： 先理一理各个工程的依赖关系 com.android.d">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://sniffer.site/2018/12/15/Android7.0%20拨号盘应用源码分析/FB9D778072D0486D898B64042F8FA8BB">
-<meta property="og:image" content="http://sniffer.site/2018/12/15/Android7.0%20拨号盘应用源码分析/673CB837DDAE44A2BF0366E591EB1F8F">
-<meta property="og:image" content="http://sniffer.site/2018/12/15/Android7.0%20拨号盘应用源码分析/6D9FB9DC04394BFC9678894B1ACE0553">
-<meta property="og:image" content="http://sniffer.site/2018/12/15/Android7.0%20拨号盘应用源码分析/E11E9264D152477196CE74D611687C2C">
-<meta property="og:image" content="http://sniffer.site/2018/12/15/Android7.0%20拨号盘应用源码分析/15D223D8DAF4439B85EEA207E1D66170">
-<meta property="og:image" content="http://sniffer.site/2018/12/15/Android7.0%20拨号盘应用源码分析/C2B30B7AF67E499FA430A708835E3CFC">
-<meta property="og:image" content="http://sniffer.site/2018/12/15/Android7.0%20拨号盘应用源码分析/32CACB6651F6463FBF729C1B1572FB64">
-<meta property="og:image" content="http://sniffer.site/2018/12/15/Android7.0%20拨号盘应用源码分析/2AF107E2F071468C94676CCA08387D15">
-<meta property="og:image" content="http://sniffer.site/2018/12/15/Android7.0%20拨号盘应用源码分析/7966A3D3619441619A695B08E2734384">
-<meta property="og:image" content="http://sniffer.site/2018/12/15/Android7.0%20拨号盘应用源码分析/CE01A21D5F3F474C872516C3169B48C8">
+<meta property="og:image" content="https://linnok.github.io/2018/12/15/Android7.0%20拨号盘应用源码分析/FB9D778072D0486D898B64042F8FA8BB">
+<meta property="og:image" content="https://linnok.github.io/2018/12/15/Android7.0%20拨号盘应用源码分析/673CB837DDAE44A2BF0366E591EB1F8F">
+<meta property="og:image" content="https://linnok.github.io/2018/12/15/Android7.0%20拨号盘应用源码分析/6D9FB9DC04394BFC9678894B1ACE0553">
+<meta property="og:image" content="https://linnok.github.io/2018/12/15/Android7.0%20拨号盘应用源码分析/E11E9264D152477196CE74D611687C2C">
+<meta property="og:image" content="https://linnok.github.io/2018/12/15/Android7.0%20拨号盘应用源码分析/15D223D8DAF4439B85EEA207E1D66170">
+<meta property="og:image" content="https://linnok.github.io/2018/12/15/Android7.0%20拨号盘应用源码分析/C2B30B7AF67E499FA430A708835E3CFC">
+<meta property="og:image" content="https://linnok.github.io/2018/12/15/Android7.0%20拨号盘应用源码分析/32CACB6651F6463FBF729C1B1572FB64">
+<meta property="og:image" content="https://linnok.github.io/2018/12/15/Android7.0%20拨号盘应用源码分析/2AF107E2F071468C94676CCA08387D15">
+<meta property="og:image" content="https://linnok.github.io/2018/12/15/Android7.0%20拨号盘应用源码分析/7966A3D3619441619A695B08E2734384">
+<meta property="og:image" content="https://linnok.github.io/2018/12/15/Android7.0%20拨号盘应用源码分析/CE01A21D5F3F474C872516C3169B48C8">
 <meta property="og:updated_time" content="2018-12-18T11:10:34.854Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android7.0 拨号盘应用源码分析">
 <meta name="twitter:description" content="前言android拨号盘的源码目录在package/app/Dialer 自7.0以后Incallui的源码直接放到了Dialer目录下，虽然在7.0以前incallui有自己独立的目录，但实际编译过程中只是作为链接库最后还是被编译到Dialer的apk里 博主这里只取Dialer相关的源码并导入AS中，并稍作调整兼容至L 源码目录结构如下： 先理一理各个工程的依赖关系 com.android.d">
-<meta name="twitter:image" content="http://sniffer.site/2018/12/15/Android7.0%20拨号盘应用源码分析/FB9D778072D0486D898B64042F8FA8BB">
+<meta name="twitter:image" content="https://linnok.github.io/2018/12/15/Android7.0%20拨号盘应用源码分析/FB9D778072D0486D898B64042F8FA8BB">
 
 
 
@@ -132,7 +135,7 @@
 
 
 
-  <link rel="canonical" href="http://sniffer.site/2018/12/15/Android7.0 拨号盘应用源码分析/">
+  <link rel="canonical" href="https://linnok.github.io/2018/12/15/Android7.0 拨号盘应用源码分析/">
 
 
 
@@ -203,12 +206,72 @@
         </li>
       
         
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>
+            
+            Schedule
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            Sitemap
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            Commonweal 404
           </a>
         </li>
       
@@ -245,7 +308,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://sniffer.site/2018/12/15/Android7.0 拨号盘应用源码分析/">
+    <link itemprop="mainEntityOfPage" href="https://linnok.github.io/2018/12/15/Android7.0 拨号盘应用源码分析/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lion heart">
@@ -464,7 +527,7 @@
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">Lion heart</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">This is MyBlog</p>
           </div>
 
           <nav class="site-state motion-element">
