@@ -501,8 +501,7 @@
           
 
   
-
-
+  
 
         </div>
         
@@ -810,6 +809,21 @@
 
 
 
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: '33f3cf9debb87d0e0974',
+          clientSecret: 'b1363163473ab472bdc68779c8b33762fbeb29e8',
+          repo: 'linnok.github.io',
+          owner: 'linnok',
+          admin: ['linnok.github.io'],
+          id: location.pathname,
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
 
   
 
