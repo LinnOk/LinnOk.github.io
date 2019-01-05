@@ -101,7 +101,7 @@
 <meta property="og:image" content="https://linnok.github.io/2018/12/15/Android7.0%20拨号盘应用源码分析/2AF107E2F071468C94676CCA08387D15">
 <meta property="og:image" content="https://linnok.github.io/2018/12/15/Android7.0%20拨号盘应用源码分析/7966A3D3619441619A695B08E2734384">
 <meta property="og:image" content="https://linnok.github.io/2018/12/15/Android7.0%20拨号盘应用源码分析/CE01A21D5F3F474C872516C3169B48C8">
-<meta property="og:updated_time" content="2018-12-18T11:10:34.854Z">
+<meta property="og:updated_time" content="2019-01-05T08:44:33.332Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android7.0 拨号盘应用源码分析">
 <meta name="twitter:description" content="前言android拨号盘的源码目录在package/app/Dialer 自7.0以后Incallui的源码直接放到了Dialer目录下，虽然在7.0以前incallui有自己独立的目录，但实际编译过程中只是作为链接库最后还是被编译到Dialer的apk里 博主这里只取Dialer相关的源码并导入AS中，并稍作调整兼容至L 源码目录结构如下： 先理一理各个工程的依赖关系 com.android.d">
@@ -115,7 +115,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '5.1.4',
-    sidebar: {"position":"right","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -160,7 +160,7 @@
     
   
 
-  <div class="container sidebar-position-right page-post-detail">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -318,6 +318,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Telephony/" itemprop="url" rel="index">
+                    <span itemprop="name">Telephony</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -422,8 +444,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/15/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2018/01/04/Android 系统服务TelecomService启动过程分析/" rel="next" title="Android7.0 拨号盘应用源码分析">
+                <i class="fa fa-chevron-left"></i> Android7.0 拨号盘应用源码分析
               </a>
             
           </div>
@@ -431,6 +453,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/01/05/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -507,12 +533,21 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
             
 
             
@@ -562,6 +597,8 @@
       
         <div class="back-to-top">
           <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
           
         </div>
       
