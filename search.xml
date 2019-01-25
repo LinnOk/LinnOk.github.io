@@ -7,6 +7,10 @@
       <categories>
         <category>Telephony</category>
       </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>hexo</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Android7.0 拨号盘应用源码分析]]></title>
