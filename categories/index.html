@@ -101,7 +101,7 @@
 <meta property="og:site_name" content="Lion&#39;s Blog">
 <meta property="og:description" content="This is MyBlog">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-25T08:29:01.623Z">
+<meta property="og:updated_time" content="2019-01-25T08:33:32.939Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="categories">
 <meta name="twitter:description" content="This is MyBlog">
@@ -325,7 +325,14 @@
       <div class="post-body">
         
         
-          
+          <div class="category-all-page">
+            <div class="category-all-title">
+                目前共计 1 个分类
+            </div>
+            <div class="category-all">
+              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Telephony/">Telephony</a><span class="category-list-count">3</span></li></ul>
+            </div>
+          </div>
         
       </div>
       
@@ -343,12 +350,6 @@
 
 
           
-
-  
-   <div id="gitalk-container">
-   </div>
-  
-
 
         </div>
         
@@ -395,10 +396,10 @@
               
               
               <div class="site-state-item site-state-categories">
-                
+                <a href="/categories/index.html">
                   <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">分类</span>
-                
+                </a>
               </div>
             
 
@@ -483,15 +484,9 @@
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
 
 
 
@@ -754,23 +749,6 @@ $(function() {
 
 
 
-
-  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-
-  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-  <script src="/js/src/md5.min.js"></script>
-   <script type="text/javascript">
-        var gitalk = new Gitalk({
-          clientID: 'e572e1c592e52c6601d7',
-          clientSecret: '799da680c3fbfb98b016a9e1451482b9b764cb5b',
-          repo: 'linnok.github.io',
-          owner: 'LinnOk',
-          admin: ['LinnOk'],
-          id: md5(location.pathname),
-          distractionFreeMode: 'true'
-        })
-        gitalk.render('gitalk-container')           
-       </script>
 
   
 
