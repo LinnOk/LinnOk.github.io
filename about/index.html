@@ -91,18 +91,18 @@
 
 
 
-<meta name="description" content="This is MyBlog">
+<meta name="description" content="一个世界有你,一个世界没有你,这两者最大的不同,就是你.">
 <meta name="keywords" content="Android Image">
 <meta property="og:type" content="website">
-<meta property="og:title" content="我的标签">
-<meta property="og:url" content="https://linnok.github.io/tags/index.html">
+<meta property="og:title" content="关于我">
+<meta property="og:url" content="https://linnok.github.io/about/index.html">
 <meta property="og:site_name" content="Lion&#39;s Blog">
-<meta property="og:description" content="This is MyBlog">
+<meta property="og:description" content="一个世界有你,一个世界没有你,这两者最大的不同,就是你.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-25T08:38:59.515Z">
+<meta property="og:updated_time" content="2019-01-25T08:40:39.167Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的标签">
-<meta name="twitter:description" content="This is MyBlog">
+<meta name="twitter:title" content="关于我">
+<meta name="twitter:description" content="一个世界有你,一个世界没有你,这两者最大的不同,就是你.">
 
 
 
@@ -132,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="https://linnok.github.io/tags/">
+  <link rel="canonical" href="https://linnok.github.io/about/">
 
 
 
 
 
-  <title>我的标签 | Lion's Blog</title>
+  <title>关于我 | Lion's Blog</title>
   
 
 
@@ -311,7 +311,7 @@
     <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">我的标签</h1>
+	<h1 class="post-title" itemprop="name headline">关于我</h1>
 
 
 
@@ -323,14 +323,8 @@
       <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                目前共计 2 个标签
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/hexo/" style="font-size: 12px; color: #ccc">hexo</a> <a href="/tags/前端/" style="font-size: 12px; color: #ccc">前端</a>
-            </div>
-          </div>
+          <p>一个世界有你,一个世界没有你,这两者最大的不同,就是你.</p>
+
         
       </div>
       
@@ -348,6 +342,12 @@
 
 
           
+
+  
+   <div id="gitalk-container">
+   </div>
+  
+
 
         </div>
         
@@ -756,6 +756,23 @@ $(function() {
 
 
 
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="/js/src/md5.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: 'e572e1c592e52c6601d7',
+          clientSecret: '799da680c3fbfb98b016a9e1451482b9b764cb5b',
+          repo: 'linnok.github.io',
+          owner: 'LinnOk',
+          admin: ['LinnOk'],
+          id: md5(location.pathname),
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
 
   
 
